@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Identified</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7F7;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{url_for('static',filename='bg.jpg')}}");
+            background-size: contain;
+        }
+        h1 {
+            color: #3B3B3B;
+            text-align: center;
+        }
+        .container {
+            
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        strong {
+            color: #3B3B3B;
+        }
+        p {
+            color: #6F6F6F;
+            text-align: center;
+        }
+        .song-recommendation {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .song-title {
+            color: #3B3B3B;
+            font-weight: bold;
+        }
+        .song-artist {
+            color: #6F6F6F;
+        }
+        .song-preview {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .spotify-iframe {
+            border: none;
+            width: 300px;
+            height: 380px;
+        }
+        .thank-you {
+            text-align: center;
+            margin-top: 30px;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+  list-style-type: none;
+}
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="links">
+            <a href="/">Back to Chatbot</a>
+            <a href="/mood_identified/{{mood}}">More Recommendations</a>
+        </div>
+        
+
+        <h1>Mood Identified</h1>
+        <p>The chatbot has identified your mood as: <strong>{{ mood }}</strong></p>
+        <div class="song-recommendation">
+            <p>Here are some song recommendations for your mood:</p>
+            <ul>
+                <li>
+                    <p class="song-title">{{ song_title_1 }}</p>
+                    <p class="song-artist">{{ song_artist_1 }}</p>
+                    <div class="song-preview">
+                        <iframe class="spotify-iframe" src="{{ song_spotify_link_1 }}"></iframe>
+                    </div>
+                </li>
+                <li>
+                    <p class="song-title">{{ song_title_2 }}</p>
+                    <p class="song-artist">{{ song_artist_2 }}</p>
+                    <div class="song-preview">
+                       <iframe class="spotify-iframe" src="{{ song_spotify_link_2 }}"></iframe>
+                    </div>
+                </li>
+                <li>
+                    <p class="song-title">{{ song_title_3 }}</p>
+                    <p class="song-artist">{{ song_artist_3 }}</p>
+                    <div class="song-preview">
+                        <iframe class="spotify-iframe" src="{{ song_spotify_link_3 }}"></iframe>
+                    </div>
+                </li>
+                <li>
+                    <p class="song-title">{{ song_title_4 }}</p>
+                    <p class="song-artist">{{ song_artist_4 }}</p>
+                    <div class="song-preview">
+                        <iframe class="spotify-iframe" src="{{ song_spotify_link_4 }}"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="thank-you">
+
+            <p>Thank you for using the chatbot! </p>
+        </div>
+    </div>
+    
+</body>
+</html>
