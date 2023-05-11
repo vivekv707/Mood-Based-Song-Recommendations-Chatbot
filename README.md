@@ -19,6 +19,13 @@ The dataset used for song recommendations is sourced from the Spotify Web API us
 
 The machine learning model used to identify emotions is a rule-based system that uses natural language processing techniques to identify keywords and phrases associated with each emotion. The model does not require training on a large dataset, as it uses a predefined set of rules to identify emotions based on user responses.
 
+## Screenshots
+
+![image](https://github.com/vivekv707/Mood-Based-Song-Recommendations-Chatbot/assets/56166510/179731b0-e605-4ca2-9a2b-ab73f19a1033)
+![image](https://github.com/vivekv707/Mood-Based-Song-Recommendations-Chatbot/assets/56166510/59abd3cd-3335-4f6d-b65e-79045d4e6a6d)
+![image](https://github.com/vivekv707/Mood-Based-Song-Recommendations-Chatbot/assets/56166510/dc1bfabf-f4c3-4537-ba65-0a1cc93e3d03)
+
+
 ## Future Work
 
 Future work on the application could include:
